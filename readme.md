@@ -11,7 +11,7 @@ This algorithm solves most of the 3 digit padlock problem
 
 Algorithm:
 
-
+```
 step 1 : Initialize 6 arrays 2 for each digit place one array containing possible digit in particular place
          and another array containing not possible digits
 
@@ -26,7 +26,7 @@ step 2 : Fill both array for each digit with following logic
 step 3 : apply filter in all accepted_position arrays and remove duplicate digits
 
 step 4 : verify each input based on possibility logic and find fixed postions
-
+```
 
 I implemented this algorithm using javascript. The code is not complete as for each probablity logic must be added
 
