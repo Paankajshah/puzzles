@@ -1,3 +1,6 @@
+# Name : Pankaj Shah
+# Email: pshah9411@gmail.com
+
 # 1. Count rows solution
 
 count rows puzzle is solved using python programming language.
