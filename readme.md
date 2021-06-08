@@ -4,7 +4,7 @@ count rows puzzle is solved using python programming language.
 since some of the lines were broken so insted of counting rows 
 particular words are counted which appeared only once in one row.
 In this case word "Kubernetes" occurences is counted and the result is 
-displayed as result
+displayed.
 
 source code :
 ```py
