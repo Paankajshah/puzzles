@@ -1,0 +1,20 @@
+count rows puzzle is solved using python programming language.
+since some of the lines were broken so insted of counting rows 
+particular words are counted which appeared only once in one row.
+In this case word "Kubernetes" occurences is counted and the result is 
+displayed as result
+
+source code :
+
+#reading file
+file = open("csv-sample.csv", "r")
+
+#reading content of file
+data = file. read()
+
+#counting the number of occurences of particular word as some word only appeared once in a row
+occurrences = data. count("Kubernetes")
+
+
+#printing number of rows
+print('Number of rows in the file is :', occurrences)
