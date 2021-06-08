@@ -1,10 +1,60 @@
+# 1. Count rows solution
+
+count rows puzzle is solved using python programming language.
+since some of the lines were broken so insted of counting rows 
+particular words are counted which appeared only once in one row.
+In this case word "Kubernetes" occurences is counted and the result is 
+displayed as result
+
+source code :
+```py
+#reading file
+file = open("csv-sample.csv", "r")
+#reading content of file
+data = file. read()
+#counting the number of occurences of particular word as some word only appeared once in a row
+occurrences = data. count("Kubernetes")
+#printing number of rows
+print('Number of rows in the file is :', occurrences)
+```
+
+# 2. Docker Image puzzle solution
+
+I used nodejs to create Web api and 
+followings docker commands are used in this puzzle to create image and then pushed to docker hub
+
+```docker
+FROM alpine:latest
+RUN apk add --no-cache nodejs npm
+COPY . app/
+WORKDIR /app
+RUN npm install
+EXPOSE 8080 
+
+ENTRYPOINT [ "node" ]
+CMD [ "index.js" ]
+
+```
+link to dockerhub image:
+
+https://hub.docker.com/repository/docker/shahpankaj/intern-test
+
+## commands
+```
+docker pull shahpankaj/intern-test:latest
+docker run -it --rm -p 8080:8080 --name sample shahpankaj/intern-test:latest
+```
+### browse http://localhost:8080/api/email it will return
+```json
+{
+    "name":"Pankaj Shah",
+    "email":"pshah9411@gmai.com"
+}
+```
 
 
 
-
-
-
-# Padlock Puzzle Solution
+# 3. Padlock Puzzle Solution
 
 To solve padlock problem I wrote an algorithm. This algorithm solves the problem in four simple steps
 This algorithm solves most of the 3 digit padlock problem
@@ -16,7 +66,7 @@ step 1 : Initialize 6 arrays 2 for each digit place one array containing possibl
          and another array containing not possible digits
 
 step 2 : Fill both array for each digit with following logic
-                [1,0] : contains one digit but in wrong place => fill not_accepted_position array with current position digit and         accepted_position array with other two postion digit
+                [1,0] : contains one digit but in wrong place => fill not_accepted_position array with current position digit and accepted_position array with other two postion digit
                 [1,1] : contains one digit  in right place => fill accepted_position array with current position digit and not_accepted_position array with other two postion digit
                 [2,0] : contains two digit but in wrong place => fill not_accepted_position array with current position digit and accepted_position array with other two postion digit
 
@@ -28,7 +78,7 @@ step 3 : apply filter in all accepted_position arrays and remove duplicate digit
 step 4 : verify each input based on possibility logic and find fixed postions
 ```
 
-I implemented this algorithm using javascript. The code is not complete as for each probablity logic must be added
+I implemented this algorithm using javascript. The code is not complete as for each probablity logic must be added and it works fine for both the padlock problem
 
 ```js
 
