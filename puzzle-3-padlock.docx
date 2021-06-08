@@ -36,45 +36,45 @@ var accepted_position_3 = [];
 const input_first = [
   {
     data: [1, 4, 7],
-    possibility: [1, 0],
+    possibility: [1, 0], // one digit is right but in wrong place
   },
   {
     data: [1, 8, 9],
-    possibility: [1, 1],
+    possibility: [1, 1], // one digit is right and in right place
   },
   {
     data: [9, 6, 4],
-    possibility: [2, 0],
+    possibility: [2, 0], // two digits are right and both in wrong place
   },
   {
     data: [5, 2, 3],
-    possibility: [0, 0],
+    possibility: [0, 0], // no digits are right 
   },
   {
     data: [2, 8, 6],
-    possibility: [1, 0],
+    possibility: [1, 0], // one digit is right but in wrong place
   },
 ];
 const input_second = [
   {
     data: [6, 8, 2],
-    possibility: [1, 1],
+    possibility: [1, 1], // one digit is right and in right place
   },
   {
     data: [6, 1, 4],
-    possibility: [1, 0],
+    possibility: [1, 0], // one digit is right but in wrong place
   },
   {
     data: [2, 0, 6],
-    possibility: [2, 0],
+    possibility: [2, 0], // two digits are right and both in wrong place
   },
   {
     data: [7, 3, 8],
-    possibility: [0, 0],
+    possibility: [0, 0], // no digits are right 
   },
   {
     data: [3, 8, 0],
-    possibility: [1, 0],
+    possibility: [1, 0], // one digit is right but in wrong place
   },
 ];
 
@@ -441,11 +441,11 @@ const guessPossibleNumbers = (arr, possibility) => {
 };
 
 
-input.forEach((obj) => {
+input_first.forEach((obj) => {
   guessPossibleNumbers(obj.data , obj.possibility)
 })
 arrayFilter();
-input.forEach((obj) => {
+input_first.forEach((obj) => {
     Verification(obj.data, obj.possibility);
   })
 
